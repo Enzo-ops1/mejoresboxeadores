@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;300&family=Mooli&display=swap');
+body{
+    margin: 0;
+    /*font-family: 'Martian Mono', monospace;*/
+    font-family: 'Mooli', sans-serif;
+}
+.CONTENEDORRR{
+    display: grid;
+    grid-template-areas: "header"
+                            "nav"
+                            "CUERPO"
+                            "CUERPO";
+    grid-template-rows: 20% auto auto;
+}
+
+
+
+.HHEADER{
+    background: linear-gradient(#333,darkred);
+    grid-area: header;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;  
+}
+
+.h1-1{
+    color: white;
+}
+
+#box{
+    width: 250px;
+    height: 130px;
+}
+
+#box:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+
+.nav{
+    grid-area: nav;
+    display: grid;
+    align-items: flex-start;
+    padding: none;
+    margin: none;
+}
+.fa-solid{
+    visibility: hidden;
+    position: absolute;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(darkred,red)
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+
+
+h2{
+    font-family: 'Mooli', sans-serif;
+    color: white;
+}
+
+p{
+    font-family: 'Martian Mono', monospace;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 20px;
+    color: white;
+}
+
+.CUERPOPRINCIPAL{
+    grid-area: CUERPO;
+    background:linear-gradient(red,darkred, black) 
+    
+
+}
+
+
+
+@media (max-width: 900px) {
+    .HHEADER{
+        flex-direction: column-reverse;
+    }
+    
+    .ul1{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        display: none;
+        
+        background-color: blue;
+    }
+    .clasemenu{
+        display: flex;
+    }
+    .fa-solid{
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        visibility: visible;
+    }
+}
